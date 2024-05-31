@@ -17,7 +17,7 @@ const Movie = ({ movie }) => {
           src={movie.Poster}
           alt={movie.Title}
         />
-        <div className="text-center bg-white shadow-slate-800 shadow-lg w-[70%] rounded-xl -mt-28 z-10 p-5 flex items-center flex-col">
+        <div className="text-center text-gray-700 bg-[#e5e5e5] shadow-slate-800 shadow-lg w-[70%] rounded-xl -mt-28 z-10 p-5 flex items-center flex-col">
           <h2 className="font-semibold text-lg">{movie.Title}</h2>
           <h2 className="font-semibold text-lg">{`Release in: ${movie.Year}`}</h2>
           <span className="text-slate-500 cursor-pointer flex justify-center items-center gap-8 text-sm mt-2 pl-3 pr-3">
