@@ -1,8 +1,9 @@
-import { useContext, useState } from 'react';
-import SearchContext from '../context/SearchContext';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { setSearch } from '../redux/moviesSlice';
 
 const SearchInput = () => {
-  const { setSearchInput } = useContext(SearchContext);
+  const dispatch = useDispatch();
   const [value, setValue] = useState('');
 
   const handleSubmit = (e) => {
@@ -10,7 +11,7 @@ const SearchInput = () => {
     if (value.trim() === '') {
       return;
     }
-    setSearchInput(value);
+    dispatch(setSearch(value));
     setValue('');
   };
 
